@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>@ViewBag.Title</title>
+		<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">PetaPoco DoddleReport Dynamic PIVOT Query Example</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="active"><a href="/">Home</a></li>
+							<li>@Html.ActionLink("DoddleReport HTML", "PivotReport")</li>
+							<li>@Html.ActionLink("DoddleReport Excel", "PivotReport.xlsx")</li>
+							<li><a href="http://www.woodcp.com" target="_blank">Implement IToddWood</a></li>
+						</ul>
+						<p class="navbar-text pull-right"><a href="https://github.com/tawman/PetaPocoPivot" target="_blank"><i class="icon-download"></i>Fork me on Github</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				@RenderBody()
+			</div>
+		</div>
+	</body>
+</html>

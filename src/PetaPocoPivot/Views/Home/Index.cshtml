@@ -1,0 +1,34 @@
+﻿@model IEnumerable<dynamic>
+@{
+	ViewBag.Title = "PetaPoco DoddleReport Dynamic PIVOT Query Example";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<table class="table table-striped">
+@{
+	var header = Model.FirstOrDefault();
+	if (header != null)
+	{
+	<thead>
+		<tr>
+		@foreach (var heading in ((IDictionary<String, Object>)header).Keys)
+		{
+			<th>@heading</th>
+		}
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var employee in Model)
+		{
+		<tr>
+			@foreach (var attribute in ((IDictionary<String, Object>) employee).Values)
+			{
+			<td>@attribute</td>
+			}
+		</tr>
+		}
+	</tbody>
+	}
+}
+</table>
