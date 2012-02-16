@@ -41,8 +41,6 @@ From the Start menu, click Run, then type *inetmgr* to open the Internet Informa
 
 Alternatively, Open the PetaPocoPivot.sln Solution in Visual Studio 2010 and explore.
 
-The sample database file provided was created with SQL Server 2008 R2. The SQL needed to create the table and populate the sample data is provided in the src/database directory.
-
 Thanks
 ------
 This software is Open Source and check the LICENSE.txt file for more details.
